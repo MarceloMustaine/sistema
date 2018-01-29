@@ -1,11 +1,10 @@
 <?php require_once('config.php'); session_start();
 
-
-@$_SESSION['mensagens'];
-
 $sql = "SELECT * FROM mangas INNER JOIN volumes GROUP BY mangas_idMangas ORDER BY idMangas ASC";
 
 $exec = $con->query($sql) or die(mysqli_error($con));
+
+@$_SESSION['mensagens'] = NULL;
 
 
 ?>
@@ -61,7 +60,8 @@ $exec = $con->query($sql) or die(mysqli_error($con));
               </div>
               
                 <div class="input-field col l3">
-                    <input type="text" class="validate" name="volNumber">
+                    <input type="text" class="validate volNumber" name="volNumber" pattern="[0-9]" title="Esse campo não aceita letras">
+                    <span class="helper-text" data-error="Esse campo não aceita letras"></span>
                     <label for="num_volume">Insira o num. do volume</label>
                 </div>
 
@@ -91,16 +91,19 @@ $exec = $con->query($sql) or die(mysqli_error($con));
                 <?php 
                 /* COMEÇO DO CÓDIGO QUE INSERE OS DADOS DO VOLUME NO BANCO DE DADOS */
 
-                @$volNumber = $_POST['volNumber'];
-                @$idManga   = $_POST['mangaNames'];
+                echo @$volNumber = $_POST['volNumber'];
+                echo @$idManga   = $_POST['mangaNames'];
                 @$mangaName = $js_deco->mangaName;
 
-
+                if(isset($_POST['btn-enviar'])){
                 if($idManga == ''){
                   $_SESSION['mensagens'] = "Você precisa escolher um mangá primeiro!";
                 }
                 else if(empty($volNumber)){
                   $_SESSION['mensagens'] = "Você não pode adicionar um volume em branco!";
+                }
+                else if (preg_match("/^[0-9]$/", $volNumber)){
+                  $_SESSION['mensagens'] = "Você só pode inserir números no campo de volume.";
                 }
                 else {
 
@@ -142,7 +145,6 @@ $exec = $con->query($sql) or die(mysqli_error($con));
                   }
                   else if($_UPLOAD['imagetmp'] < $_FILES['imgManga']['size']) {
                     $_UPLOAD['errors'][$_FILES['imgManga']['error']] . ' ';
-                    echo "dê andamento no upload ";
                   }
                   if(@copy($_UPLOAD['imagetmp'], $_UPLOAD['directory'] . $_UPLOAD['newimgname'])){
 
@@ -151,7 +153,7 @@ $exec = $con->query($sql) or die(mysqli_error($con));
                     $exec_send = $con->query($sql_send) or die(mysqli_error($con));
 
                     if(!$exec){
-                        echo mysqli_error($con);
+                        echo "esse é o número do erro " . mysqli_error($con);
                     }
                     else{
                       $_SESSION['success'] = "Você adicionou um volume ao mangá " . $mangaName;
@@ -160,57 +162,7 @@ $exec = $con->query($sql) or die(mysqli_error($con));
                     }
                   }
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                /*else{
-
-                if(isset($_POST['btn-enviar'])){
-                    $sql_send = "INSERT INTO `volumes` (`volNum`, `mangas_idMangas`) VALUES ('$volNumber', '$idManga')";
-
-                    $exec_send = $con->query($sql_send) or die(mysqli_error($con));
-
-                    if(!$exec_send){
-                      $_SESSION['mensagens'] = "não funcionou";
-                    }
-                    else{
-                      $_SESSION['success'] = "Você adicionou um volume ao mangá" . $js_deco->mangaName;
-                      header('location:index.php');
-                    }
-                  }
-                }*/
-
-                /* TERMINO DO CÓDIGO QUE INSERE OS DADOS DO VOLUME NO BANCO DE DADOS */
+              }
                 ?>
 
                 <div class="col l7">
@@ -236,6 +188,8 @@ $exec = $con->query($sql) or die(mysqli_error($con));
           $('select').select();
         });
       </script>
+
+<!--      código para mostrar a imagem durante o processo de adição da imagem do volume -->
       <script type="text/javascript">
         function preview_image(event) 
           {

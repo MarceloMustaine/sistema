@@ -127,7 +127,7 @@ $getmangaid = $_GET['idManga'];
             $exec1 = $con->query($sql) or die(mysqli_error($con));
 
             $assoc = mysqli_fetch_array($exec);
-
+            
 
          ?>
 
