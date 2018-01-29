@@ -121,13 +121,13 @@ $getmangaid = $_GET['idManga'];
 
             //$sql = "SELECT DISTINCT manga_info.manga_infos, volumes_info.capselinks FROM manga_info, volumes_info WHERE manga_info_id_manga = '$getmangaid' GROUP BY manga_info_id_manga";
 
-            $sql = "SELECT * FROM mangas INNER JOIN volumes WHERE idMangas = '$getmangaid'";
+            $sql = "SELECT * FROM mangas, volumes, capitulos WHERE idMangas = '$getmangaid'";
 
             $exec = $con->query($sql) or die(mysqli_error($con));
             $exec1 = $con->query($sql) or die(mysqli_error($con));
 
             $assoc = mysqli_fetch_array($exec);
-            
+
 
          ?>
 
@@ -166,7 +166,7 @@ $getmangaid = $_GET['idManga'];
 						<div class="vol-chapters">
 							<ul>
                                 <li>
-                                 Capítulo <?php echo $dados['volCaps'] ?> <a href="#">MEGA</a>
+                                 <?php echo $dados['capname'] ." "; ?><a href="<?php echo $dados['caplink']; ?>"><?php echo $dados['capServerName']; ?></a>
                                 </li>
 							</ul>
 						</div>
