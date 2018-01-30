@@ -162,10 +162,6 @@ $getmangaid = $_GET['idManga'];
                     }
                     else {
                         while($dados = mysqli_fetch_array($exec1)){
-
-                    
-                   
-                        
                 ?>
 
 				<div class="manga-download">
