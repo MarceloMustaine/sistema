@@ -64,7 +64,7 @@
 
         $js_encode = json_encode($array_enc, JSON_UNESCAPED_UNICODE); /* <- Solução para os acentos e outros caracteres esquisitos no JSON*/
 
-        $sql = "INSERT INTO `mangas`(`infos`) VALUES ('$js_encode')";
+        $sql = "INSERT INTO `mangas`(`infos`, `mangaStatus`) VALUES ('$js_encode', '1')";
         $exec = $con -> query($sql) or die(mysqli_error($con));
 
         if(!$exec){
