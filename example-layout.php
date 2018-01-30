@@ -83,28 +83,28 @@ $getmangaid = $_GET['idManga'];
             <ul class="dropdMenu">
               <li class="button-dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle">
-                  <img src="fotos/cb47165c8f.gif">
+                  <img src="../fotos/cb47165c8f.gif">
                 </a>
                 <ul class="dropdown-menu">
                   <li>
                     <a href="#">
-                      <img src="fotos/55cab5bab2.gif">
+                      <img src="../fotos/55cab5bab2.gif">
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <img src="fotos/55cab5bab2.gif">
+                      <img src="../fotos/55cab5bab2.gif">
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <img src="fotos/55cab5bab2.gif">
+                      <img src="../fotos/55cab5bab2.gif">
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="button-dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle"><img src="fotos/a3db5373ea.gif"></a>
+                  <a href="javascript:void(0)" class="dropdown-toggle"><img src="../fotos/a3db5373ea.gif"></a>
                   <ul class="dropdown-menu">
                     <li>
                         <a href="#">A</a>
@@ -122,12 +122,16 @@ $getmangaid = $_GET['idManga'];
             //$sql = "SELECT DISTINCT manga_info.manga_infos, volumes_info.capselinks FROM manga_info, volumes_info WHERE manga_info_id_manga = '$getmangaid' GROUP BY manga_info_id_manga";
 
             $sql_infos = "SELECT DISTINCT * FROM mangas WHERE idMangas = '$getmangaid'";
-            $sql_vol_caps = "SELECT volumes.volNum, volumes.imgVol, volumes.volLink, volumes.volServerName, capitulos.capname, capitulos.caplink, capitulos.capServerName FROM volumes, capitulos WHERE volumes_mangas_idMangas = '$getmangaid'";
+            $sql_vol_caps = "SELECT volumes.volumeId ,volumes.volNum, volumes.imgVol, volumes.volLink, volumes.volServerName, capitulos.capname, capitulos.caplink, capitulos.capServerName FROM volumes, capitulos WHERE volumes_mangas_idMangas = '$getmangaid'";
 
             $infos = $con->query($sql_infos) or die(mysqli_error($con));
             $exec1 = $con->query($sql_vol_caps) or die(mysqli_error($con));
 
+            $numRows = mysqli_num_rows($exec1);
+
             $assoc = mysqli_fetch_array($infos);
+
+
 
          ?>
 
@@ -152,12 +156,23 @@ $getmangaid = $_GET['idManga'];
 
 				<!-- COMEÇA AQUI -->
                 <?php
-                    while($dados = mysqli_fetch_array($exec1)){
+
+                    if($numRows == 0){
+                        echo "Esse mangá não tem nenhum capítulo ainda!";
+                    }
+                    else {
+                        while($dados = mysqli_fetch_array($exec1)){
+
+                    
+                   
+                        
                 ?>
+
 				<div class="manga-download">
+
 					<div class="manga-volume">
 						<div class="vol-number">
-							<span>> Volume <?php echo $dados['volNum']; ?></span>
+							<span>> Volume <?php echo $dados['volNum'];  ?> </span>
 						</div>
 						<div class="img-volume">
 							<img src="imgs/capas/<?php echo $dados['imgVol']; ?>">
@@ -180,7 +195,7 @@ $getmangaid = $_GET['idManga'];
             	<!-- TERMINA AQUI -->
 
             	
-            	<?php } ?>
+            	<?php }} ?>
             </div>
         </section> 
 
