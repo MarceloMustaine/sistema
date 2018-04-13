@@ -1,0 +1,32 @@
+.menu-usuario {
+  float: left;
+  width: 300px;
+  height: 100%;
+}
+.header-usuario {
+	background: #424242;
+	height: 250px;
+}
+.avatar-usuario {
+	width: 160px;
+	padding-left:12px;
+	padding-top:20px;
+}
+.avatar-usuario img {
+	height: 150px;
+}
+.info-usuario {
+	margin-top:-20px;
+}
+.userName {
+	font-family: 'Quicksand', sans-serif;
+	color:#fff;
+	font-weight: 700;
+	font-size: 24px;
+}
+.nickName {
+	font-family: 'Quicksand', sans-serif;
+	color:#fff;
+	font-size:10px;
+	text-align: center;
+}
