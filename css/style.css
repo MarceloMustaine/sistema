@@ -12,6 +12,7 @@ body, html{
 	background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	height: 250px;
+	float:left;
 }
 .avatar-usuario {
 	width: 160px;
@@ -23,6 +24,7 @@ body, html{
 }
 .info-usuario {
 	margin-top:-20px;
+	float:left;
 }
 .userName {
 	font-family: 'Quicksand', sans-serif;
@@ -38,26 +40,32 @@ body, html{
 }
 .menu {
 	float:left;
+	font-family: 'Quicksand', sans-serif;
 	width:300px;
 	background: #fff;
-	line-height: 1;
 }
-.menu ul {
-	padding-top:10px;
-	font-family: 'Quicksand', sans-serif;
+.collapsible-header {
+	box-shadow: none;
+    height: 40px;
+    line-height: 11px;
 }
-.menu ul li {
-	width:100%;
-	height: 35px;
-	font-size:18px;
+.collapsible-body {
+	box-shadow: none;
+    display: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:15px 0 15px 25px;
+    color: #424242
 }
-.menu ul li:hover {
-	background: #ffa000;
-	color:#fff;
+.sidenav {
+	top:initial !important;
 }
-.menu ul li a {
-	color:#212121;
-	margin-left:25px;
-	line-height: 35px;
-	width:100%;
+.sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
+	float:right;
 }
+
+
+
+
+
+/* HELPERS */ 

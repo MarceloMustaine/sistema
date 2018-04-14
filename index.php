@@ -40,11 +40,25 @@
             </div>
           </div>
           <div class="menu">
-            <ul>
-              <li class="bold">
-                <a href="#">Home</a>
-              </li>
-            </ul>
+          <ul class="collapsible sidenav sidenav-fixed">
+            <li><a  class="collapsible-header" href="/sistema">Home</a></li>
+            <li>
+              <a class="collapsible-header">Projeto <i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="color.html">Adicionar Projeto</a></li>
+                  <li><a href="grid.html">Adicionar Volume</a></li>
+                  <li><a href="grid.html">Adicionar Capítulo</a></li>
+                  <li><a href="helpers.html">Modificar Projeto</a></li>
+                  <li><a href="media-css.html">Modificar Volume</a></li>
+                  <li><a href="media-css.html">Modificar Capítulo</a></li>
+                  <li><a href="media-css.html">Excluir Projeto</a></li>
+                  <li><a href="media-css.html">Excluir Volume</a></li>
+                  <li><a href="media-css.html">Excluir Capítulo</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
           </div>
         </div>
       </section>
@@ -71,6 +85,10 @@
       <script type="text/javascript">
         var elem = document.querySelector('.sidenav');
         var instance = M.Sidenav.init(elem, 'options');
+      </script>
+      <script type="text/javascript">
+        var elem = document.querySelector('.collapsible');
+        var instance = M.Collapsible.init(elem, 'options');
       </script>
     </body>
   </html>
