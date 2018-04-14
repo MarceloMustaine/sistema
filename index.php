@@ -5,6 +5,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+      
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
       <link rel="stylesheet" href="css/style.css">
@@ -19,7 +20,7 @@
 
       <!-- MENU USUARIO -->
 
-      <section class="menu-usuario">
+      <section class="usuario z-depth-2">
         <div class="header-usuario">
           <div class="container">
             <div class="row">
@@ -32,11 +33,18 @@
             <div class="row">
               <div class="col l12">
                 <div class="info-usuario">
-                  <div class="userName">Marcelo Ferreira</span>
-                  <div class="nickName center-align">(MarceloMustaine)</span>
+                  <div class="userName">Marcelo Ferreira</div>
+                  <div class="nickName">(MarceloMustaine)</div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="menu">
+            <ul>
+              <li class="bold">
+                <a href="#">Home</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
