@@ -46,15 +46,15 @@
               <a class="collapsible-header">Projeto <i class="material-icons">arrow_drop_down</i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="color.html">Adicionar Projeto</a></li>
-                  <li><a href="grid.html">Adicionar Volume</a></li>
-                  <li><a href="grid.html">Adicionar Capítulo</a></li>
-                  <li><a href="helpers.html">Modificar Projeto</a></li>
-                  <li><a href="media-css.html">Modificar Volume</a></li>
-                  <li><a href="media-css.html">Modificar Capítulo</a></li>
-                  <li><a href="media-css.html">Excluir Projeto</a></li>
-                  <li><a href="media-css.html">Excluir Volume</a></li>
-                  <li><a href="media-css.html">Excluir Capítulo</a></li>
+                  <li><a href="#">Adicionar Projeto</a></li>
+                  <li><a href="#">Adicionar Volume</a></li>
+                  <li><a href="#">Adicionar Capítulo</a></li>
+                  <li><a href="#">Modificar Projeto</a></li>
+                  <li><a href="#">Modificar Volume</a></li>
+                  <li><a href="#">Modificar Capítulo</a></li>
+                  <li><a href="#">Excluir Projeto</a></li>
+                  <li><a href="#">Excluir Volume</a></li>
+                  <li><a href="#">Excluir Capítulo</a></li>
                 </ul>
               </div>
             </li>
