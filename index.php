@@ -41,7 +41,7 @@
           </div>
           <div class="menu">
           <ul class="collapsible sidenav sidenav-fixed">
-            <li><a  class="collapsible-header" href="/sistema">Home</a></li>
+            <li class="active"><a class="collapsible-header" href="/sistema">Home</a></li>
             <li>
               <a class="collapsible-header">Projeto <i class="material-icons">arrow_drop_down</i></a>
               <div class="collapsible-body">

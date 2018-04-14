@@ -42,6 +42,7 @@ body, html{
 	float:left;
 	font-family: 'Quicksand', sans-serif;
 	width:300px;
+	height: 100%;
 	background: #fff;
 }
 .collapsible-header {
@@ -55,7 +56,8 @@ body, html{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding:15px 0 15px 25px;
-    color: #424242
+    color: #424242;
+    height:100%;
 }
 .sidenav {
 	top:initial !important;
@@ -64,6 +66,14 @@ body, html{
 	float:right;
 }
 
+.collapsible, .sidenav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.sidenav .collapsible-header:hover, .sidenav.fixed .collapsible-header:hover {
+    background-color: #ffa000;
+}
 
 
 
