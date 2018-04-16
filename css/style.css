@@ -1,81 +1,52 @@
-body, html{
-  height: 100%;
-}
-
-.usuario {
-  float: left;
-  width: 300px;
-  height: 100%;
+main {
+padding-left:350px;
 }
 .header-usuario {
-	background: #fc4a1a;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 250px;
-	float:left;
+background: #fc4a1a;
+/*background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+background: linear-gradient(to right, #f7b733, #fc4a1a); */
+background: url('yu1.jpg');
+background-size:cover;
+height: 200px;
 }
 .avatar-usuario {
-	width: 160px;
-	padding-left:12px;
-	padding-top:20px;
+width: 250px;
+padding-top:25px;
+/*margin-top:20px;*/
 }
 .avatar-usuario img {
-	height: 150px;
+height: 100px;
+margin-left: 40px;
 }
 .info-usuario {
-	margin-top:-20px;
-	float:left;
+margin-top:-40px;
+float:left;
 }
 .userName {
-	font-family: 'Quicksand', sans-serif;
-	color:#fff;
-	font-weight: 700;
-	font-size: 24px;
+color:#fff;
+font-weight: 700;
+font-size: 1.5em;
 }
 .nickName {
-	font-family: 'Quicksand', sans-serif;
-	color:#fff;
-	font-size:10px;
-	text-align: center;
+color:#fff;
+font-size:10px;
+margin-top: -20px;
+text-align: center;
 }
-.menu {
-	float:left;
-	font-family: 'Quicksand', sans-serif;
-	width:300px;
-	height: 100%;
-	background: #fff;
+.sidenav .collapsible-header {
+padding: 0 31px;
 }
-.collapsible-header {
-	box-shadow: none;
-    height: 40px;
-    line-height: 11px;
+.welcome {
+height: 55px;
+background: #fff;
 }
-.collapsible-body {
-	box-shadow: none;
-    display: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding:15px 0 15px 25px;
-    color: #424242;
-    height:100%;
+.welcome h4 {
+line-height: 55px;
+padding-left: 15px;
+color:#727272;
 }
-.sidenav {
-	top:initial !important;
+@media screen and (min-width: 768px) {
+a {
+  color: black;
 }
-.sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
-	float:right;
 }
-
-.collapsible, .sidenav {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.sidenav .collapsible-header:hover, .sidenav.fixed .collapsible-header:hover {
-    background-color: #ffa000;
-}
-
-
-
-
-/* HELPERS */ 
