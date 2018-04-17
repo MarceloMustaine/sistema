@@ -5,9 +5,14 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>
+        Manga SRC - Home
+      </title>
 
     </head>
 
@@ -20,7 +25,7 @@
                 <div class="row">
                   <div class="col l12">
                     <div class="avatar-usuario">
-                      <img class="responsive-img circle z-depth-2" src="foto.jpg">
+                      <img class="responsive-img circle z-depth-2" src="imgs/avatar/foto.jpg">
                     </div>
                   </div>
                 </div>
@@ -72,24 +77,35 @@
       </ul>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </header>
+     
       <main>
         <div class="row">
-          <div class="col s11">
-            <div class="card welcome">
-              <h4>Bem vindo, <b>Marcelo!</b></h4>
+          <div class="col l12">
+            <div id="fecha" class="card welcome">
+              <div class="row">
+                <div class="col l11">
+                  <p>Bem-vindo, <b>Marcelo!</b></p>
+                </div>
+                <div class="col l1"><div class="dismiss"><span><a href="#fecha">X</a></span></div></div>
+              </div>
             </div>
           </div>
-          <div class="separador"></div>
         </div>
       </main>
+
+
+
+
+
+
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
       <script type="text/javascript">
         var elem = document.querySelector('.collapsible');
-      var instance = M.Collapsible.init(elem, 'options');
+        var instance = M.Collapsible.init(elem, 'options');
 
-      var elem = document.querySelector('.sidenav');
-      var instance = M.Sidenav.init(elem, 'options');
+        var elem = document.querySelector('.sidenav');
+        var instance = M.Sidenav.init(elem, 'options');
       </script>
     </body>
   </html>
