@@ -36,6 +36,9 @@ main {
 .sidenav .collapsible-header {
 	padding: 0 31px;
 }
+.sidenav-trigger a {
+	color:#212121;
+}
 .welcome {
 	display: block;
 	height: 55px;
@@ -67,8 +70,23 @@ main {
 .dismiss span a:hover {
 	color:#000;
 }
-@media screen and (min-width: 768px) {
-	a {
-	  color: black;
-	}
+
+.corpo {
+	height: 450px;
+}
+@media screen and (max-width:1090px) {
+	.welcome p {
+      		font-size:1.3em;
+      	}
+      	.dismiss span a{
+			margin-left:12px;
+		}
+}
+@media screen and (max-width: 990px) {
+      	main {
+      		padding-left:100px;
+      	}
+      	.dismiss span a{
+			margin-left:9px;
+		}
 }

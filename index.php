@@ -80,15 +80,20 @@
      
       <main>
         <div class="row">
-          <div class="col l12">
+          <div class="col l6 m10">
             <div id="fecha" class="card welcome">
               <div class="row">
-                <div class="col l11">
+                <div class="col l10 m11">
                   <p>Bem-vindo, <b>Marcelo!</b></p>
                 </div>
-                <div class="col l1"><div class="dismiss"><span><a href="#fecha">X</a></span></div></div>
+                <div class="col l2 m1"><div class="dismiss"><span><a href="#fecha">X</a></span></div></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l12 m10">
+            <div class="card corpo">Teste</div>
           </div>
         </div>
       </main>
