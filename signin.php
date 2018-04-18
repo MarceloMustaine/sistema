@@ -57,6 +57,17 @@
 				        	</div>
 				      	</div>
 
+				      	<div class="row">
+				      		<div class="right-align botao-enviar">
+					      		<div class="col s11">
+					      			<button class="btn waves-effect waves-light" type="submit" name="action">
+					      				Cadastrar
+									    <i class="material-icons right">send</i>
+									</button>
+					      		</div>
+				      		</div>	
+				      	</div>
+
 		    	</div>
 
 	    	</div>
