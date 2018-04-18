@@ -14,8 +14,12 @@
     </head>
 
     <body>
+    	<form action="cadastra.php" method="post" enctype="multipart/form-data">
+
     	<div class="row">
+    		
     		<div class="col l12">
+
     			<div class="container">
 
 			    	<div class="card ">	
@@ -68,12 +72,15 @@
 				      		</div>	
 				      	</div>
 
-		    	</div>
+		    		</div>
+
+	    		</div>
 
 	    	</div>
 
 		</div>
 
+	</form>
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     </body>
