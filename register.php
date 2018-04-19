@@ -38,7 +38,7 @@
 					    		<div class="input-field col s11">
 					    			<input id="nickName" name="nickName" type="text" class="validate">
 						          	<label for="nickName">Insira seu Nick</label>
-						          	<span class="helper-text nick" data-error="Nick já cadastrado" data-success="Nick Disponível"></span>
+						          	<span class="helper-text nick" data-success="Nick Disponível" data-error="Nick já cadastrado"></span>
 					    		</div>
 					    	</div>
 					    </div>
@@ -48,7 +48,7 @@
 						        <div class="input-field col s11">
 						          <input id="emailUser" name="emailUser" type="email" class="validate" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$">
 						          <label for="emailUser">Insira um email válido</label>
-						          <span class="helper-text" data-error="Email já cadastrado" data-success="Email nunca usado"></span>
+						          <span class="helper-text"></span>
 						        </div>
 					        </div>
 					    </div>
@@ -95,28 +95,28 @@
 	                        //alert(nomeUsuario);
 
 	                        $.post('admin/verifica.php', {nickName: nickName}, function(data){
-	                                $('.helper-text').html(data);//onde vou escrever o resultado
-	                                if(nickName == null){
-	                                	 $('.helper-text').html(data);//onde vou escrever o resultado
+	                                if(nickName != ''){
+	                                	 alert('preenchido');
 	                                }
 	                                else {
-	                                	$('.helper-text').html(data);//onde vou escrever o resultado
-	                                }
-	                        });
-
-	                        var email = $("input[name='emailUser']").val();
-	                        //alert(nomeUsuario);
-
-	                        $.post('admin/verifica.php', {email: email}, function(data){
-	                                $('.helper-text').html(data);//onde vou escrever o resultado
-	                                if(email == null){
-	                                	 $('.helper-text').html(data);//onde vou escrever o resultado
-	                                }
-	                                else {
-	                                	$('.helper-text').html(data);//onde vou escrever o resultado
+	                                	
 	                                }
 	                        });
 	                });
+	        	$("#emailUser").blur( function(){
+	        		var email = $("input[name='emailUser']").val();
+	                        //alert(nomeUsuario);
+
+	                        $.post('admin/verifica.php', {email: email}, function(data){
+	                                
+	                                if(email != ''){
+	                                	 $('.helper-text').attr("data-success","aff");
+	                                }
+	                                else {
+	                                	$('.helper-text').attr("data-error","aff2");
+	                                }
+	                        });
+	        	});
 
 	        });// fim do jquery
 				

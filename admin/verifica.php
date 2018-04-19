@@ -2,7 +2,7 @@
 
 	@$usuario =  @$_POST['userName'];
 	@$nick 	  =  @$_POST['nickName'];
-	@$email   =  @$_POST['emailUser']
+	@$email   =  @$_POST['emailUser'];
 
 	$sql = "SELECT * FROM `usuarios` WHERE `nick_usuario` = '$nick' OR `email_usuario` = '$email'"; //{$_POST['userName']}
 
