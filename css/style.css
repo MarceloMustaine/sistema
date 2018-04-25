@@ -104,3 +104,79 @@ main {
 .botao-enviar .btn {
     margin-right: -3px;
 }
+
+.message {
+	height: 105px;
+}
+
+
+/* PÁGINA DE LOGIN */
+
+.input-field .prefix.active {
+    color: #f57c00;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #f57c00;
+    -webkit-box-shadow: 0 1px 0 0 #f57c00;
+    box-shadow: 0 1px 0 0 #f57c00;
+}
+
+.login {
+    width: 400px;
+    height: 500px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mleft {
+    margin-left: 5%;
+}
+
+.mup {
+    margin-top: 2%;
+}
+
+.login-box {
+    margin-top: 10px;
+}
+
+.logar {
+    height: 200px;
+    width: 400px;
+}
+
+.meio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -195px;
+    margin-left: -90px;
+    font-size: 4em;
+    color: #eeeeee;
+}
+
+.direita {
+    margin-right: 15px;
+}
+
+.direita input[type=submit] {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #009688;
+}
+
+
+/* FIM PÁGINA DE LOGIN */
