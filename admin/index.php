@@ -1,3 +1,11 @@
+<?php require_once('conecta.php'); session_start();
+
+if($_SESSION['userNick'] == null){  
+  header('location:../login');
+}
+else {
+
+?>
 <!DOCTYPE html>
   <html>
     <head>
@@ -25,15 +33,15 @@
                 <div class="row">
                   <div class="col l12">
                     <div class="avatar-usuario">
-                      <img class="responsive-img circle z-depth-2" src="imgs/avatar/foto.jpg">
+                      <img class="responsive-img circle z-depth-2" src="imgs/avatar/<?php echo $_SESSION['userAvatar']; ?>">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col l12">
                     <div class="info-usuario">
-                      <div class="userName">Marcelo Ferreira</div>
-                      <div class="nickName">(MarceloMustaine)</div>
+                      <div class="userName"><?php echo $_SESSION['userName']; ?></div>
+                      <div class="nickName">(<?php echo $_SESSION['userNick']; ?>)</div>
                     </div>
                   </div>
                 </div>
@@ -74,6 +82,7 @@
               </li>
             </ul>
           </li>
+          <li><a href="sair">Sair</a></li>
       </ul>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </header>
@@ -84,7 +93,7 @@
             <div id="fecha" class="card welcome">
               <div class="row">
                 <div class="col l10 m11">
-                  <p>Bem-vindo, <b>Marcelo!</b></p>
+                  <p>Bem-vindo, <b><?php echo $_SESSION['userName']; ?></b></p>
                 </div>
                 <div class="col l2 m1"><div class="dismiss"><span><a href="#fecha">X</a></span></div></div>
               </div>
@@ -114,3 +123,4 @@
       </script>
     </body>
   </html>
+  <?php } ?>
