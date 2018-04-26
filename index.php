@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,20 +26,23 @@
                     </div>
                     <div class="login-box">
                         <form class="col s12" method="post" action="admin/check.php">
-                            <div class="row" style="margin-left:2px;">
+
+                            <div class="row" >
                                 <div class="input-field col s11">
                                     <i class="material-icons prefix">account_circle</i>
                                     <input id="icon_prefix" type="text" name="user" class="validate">
                                     <label for="icon_prefix">Usuário ou Email</label>
                                 </div>
                             </div>
-                            <div class="row" style="margin-left:2px;">
+
+                            <div class="row">
                                 <div class="input-field col s11">
                                     <i class="material-icons prefix">lock</i>
                                     <input id="password" name="userPass" type="password" class="validate">
                                     <label for="password">Senha</label>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col l12">
                                     <div class="checkb left-align">
@@ -49,6 +53,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col l12">
                                     <div class="right direita">
@@ -60,6 +65,18 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="row">
+                            <div class="col l12">
+                                <?php echo @$_SESSION['message']; 
+
+                                    if(isset($_SESSION['message'])){
+                                        session_destroy();
+                                    }
+
+
+                                ?>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

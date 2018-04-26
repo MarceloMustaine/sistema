@@ -37,6 +37,8 @@
     }
     else {
         echo "não logado";
+        $_SESSION['message'] = '<div class="card red darken-4 erro-login"><p>Usuário ou Senha incorretos!</p></div>';
+        header('location:../index');
     }
 }
 else {

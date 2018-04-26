@@ -39,15 +39,20 @@ main {
 .sidenav-trigger a {
 	color:#212121;
 }
-.welcome {
+/*.welcome {
 	display: block;
 	height: 55px;
 	background: #fff;
+}*/
+
+.welcome {
+	height: 35px;
 }
+
 .welcome p {
 	line-height: 55px;
 	padding-left: 15px;
-	font-size: 30px;
+	font-size: 2em;
 	color:#727272;
 	margin:0;
 }
@@ -73,6 +78,7 @@ main {
 
 .corpo {
 	height: 450px;
+	overflow: hidden;
 }
 @media screen and (max-width:1090px) {
 	.welcome p {
@@ -177,24 +183,34 @@ input[type="checkbox"]:checked+span:not(.lever):before {
 }
 
 .direita input[type=submit] {
-    border: none;
-    border-radius: 2px;
-    display: inline-block;
-    height: 36px;
-    line-height: 36px;
-    outline: 0;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    vertical-align: middle;
-    -webkit-tap-highlight-color: transparent;
-    background-color: #009688;
+    background-color: #f57c00;
 }
 
 .checkb {
 	margin-left:27px;
 }
-
+.erro-login {
+	height: 35px;
+	width:400px;
+	position:absolute;
+}
+.erro-login p {
+	color:#fff;
+	line-height: 5px;
+}
 /* FIM PÁGINA DE LOGIN */
+
+.options i {
+	font-size:7em;
+	color:#727272;
+}
+.options a {
+	font-size: 2em;
+	color:#e0e0e0;
+}
+.options a:hover {
+	color:#f57c00;
+}
 
 
 /* */

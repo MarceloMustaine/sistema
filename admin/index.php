@@ -88,23 +88,80 @@ else {
       </header>
      
       <main>
-        <div class="row">
+
+        <!--<div class="row">
           <div class="col l6 m10">
             <div id="fecha" class="card welcome">
               <div class="row">
                 <div class="col l10 m11">
-                  <p>Bem-vindo, <b><?php echo $_SESSION['userName']; ?></b></p>
+                  <p>Bem-vindo, <b><?php //echo $_SESSION['userName']; ?></b></p>
                 </div>
                 <div class="col l2 m1"><div class="dismiss"><span><a href="#fecha">X</a></span></div></div>
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
+
         <div class="row">
+
           <div class="col l12 m10">
-            <div class="card corpo">Teste</div>
+
+            <div class="card corpo">
+
+              <div class="row">
+                <div class="col l12">
+                  <div class="welcome">
+                    <p>Bem-vindo, <b><?php echo $_SESSION['userName']; ?></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="row">
+                
+                <div class="col s4">
+                  <div class="card">
+                    <i class="material-icons">add</i>
+                  </div>
+                </div>
+
+                <div class="col s4">
+
+                </div>
+
+                <div class="col s4">
+
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="divider"></div>
+              </div>
+
+                <div class="row">
+
+                <div class="col s4">
+                  
+                </div>
+
+                <div class="col s4">
+                  
+                </div>
+
+                <div class="col s4">
+                  
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </main>
 
 
